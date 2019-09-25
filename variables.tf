@@ -48,3 +48,15 @@ variable "alarm_memory_threshold" {
 variable "alarm_actions" {
   type = "list"
 }
+
+variable "auth_token" {
+  default = ""
+}
+
+variable "at_rest_encryption_enabled" {
+  default = false
+}
+
+variable "transit_encryption_enabled" {
+  default = false
+}

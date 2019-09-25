@@ -28,6 +28,11 @@ resource "aws_elasticache_replication_group" "redis" {
   notification_topic_arn        = "${var.notification_topic_arn}"
   port                          = "6379"
 
+  # @todo, Should be the default and required in a future release.
+  auth_token                 = "${var.auth_tokne}"
+  at_rest_encryption_enabled = "${var.at_rest_encryption_enabled}"
+  transit_encryption_enabled = "${var.transit_encryption_enabled}"
+
   tags {
     Name        = "CacheReplicationGroup"
     Project     = "${var.project}"
